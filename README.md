@@ -3,7 +3,7 @@ Angular standalone user dashboard with RxJS state management, Chart.js pie chart
 
 # Angular User Dashboard (Standalone + RxJS + Chart.js)
 
-A modern Angular 14+ dashboard built with standalone components, RxJS state management, and Chart.js. It allows dynamic user management with real-time updates, lazy-loaded forms, and optimized rendering.
+A modern Angular 17+ dashboard built with standalone components, RxJS state management, and Chart.js. It allows dynamic user management with real-time updates, lazy-loaded forms, and optimized rendering.
 
 ---
 
