@@ -22,7 +22,7 @@ A modern Angular 14+ dashboard built with standalone components, RxJS state mana
 
 ## 🛠 Tech Stack
 
-- Angular 14+
+- Angular 17
 - RxJS
 - Chart.js
 - Tailwind CSS
