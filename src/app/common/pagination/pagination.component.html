@@ -1,0 +1,55 @@
+<div
+  class="flex items-center justify-between flex-col md:flex-row gap-4 px-6 py-5 border-t border-gray-100"
+>
+  <!-- INFO -->
+
+  <p class="text-sm text-gray-500">
+    Page
+    <span class="font-semibold text-[#383838]">
+      {{ currentPage() }}
+    </span>
+    of
+    <span class="font-semibold text-[#383838]">
+      {{ totalPages() }}
+    </span>
+  </p>
+
+  <!-- CONTROLS -->
+
+  <div class="flex items-center gap-2">
+    <!-- PREVIOUS -->
+    <button
+      (click)="previousPage()"
+      [disabled]="currentPage() === 1"
+      class="h-10 px-4 rounded-xl border border-gray-200 bg-white text-sm font-medium text-[#383838] hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200"
+    >
+      Previous
+    </button>
+
+    <!-- PAGE BUTTONS -->
+
+    @for (page of pages(); track page) {
+      <button
+        (click)="goToPage(page)"
+        [class]="
+          currentPage() === page
+            ? 'bg-[#1c4980] text-white border-[#1c4980]'
+            : 'bg-white text-[#383838] border-gray-200 hover:bg-gray-50'
+        "
+        class="h-10 w-10 rounded-xl border text-sm font-medium transition-all duration-200"
+      >
+        {{ page }}
+      </button>
+    }
+
+    <!-- NEXT -->
+
+    <button
+      (click)="nextPage()"
+      [disabled]="currentPage() === totalPages()"
+      class="h-10 px-4 rounded-xl border border-gray-200 bg-white text-sm font-medium text-[#383838] hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200"
+    >
+      Next
+    </button>
+  </div>
+</div>
